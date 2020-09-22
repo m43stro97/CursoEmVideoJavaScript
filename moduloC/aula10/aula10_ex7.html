@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de números</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+        }
+        input{
+            font: normal 15pt Arial;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Soma de números</h1>
+    <input type="number" name="input1" id="input1"> +
+    <input type="number" name="input2" id="input2">
+    <input type="button" value="Soma" onclick="soma()">
+    <div id="res">...</div>
+    <script>
+        function soma(){
+            var txt1 = document.getElementById('input1');
+            var txt2 = document.querySelector('input#input2');
+
+            var n1 = Number.parseInt(txt1.value);
+            var n2 = Number.parseInt(txt2.value);
+
+            var resultado = n1 + n2;
+
+            var div1 = document.querySelector('div#res');
+            div1.innerHTML = `A soma de ${n1} com ${n2} dá <strong>${resultado}</strong>.`
+        }
+    </script>
+</body>
+</html>
