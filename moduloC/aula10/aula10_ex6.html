@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            background-color: turquoise;
+            height: 200px;
+            width: 200px;
+            font: normal 20pt Arial;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+    <script>
+        var div1 = window.document.getElementById('area');
+        div1.addEventListener('mouseover', over);
+        div1.addEventListener('mouseout', out);
+        
+        function over() {
+            div1.style.background = "red";
+            div1.innerText = "Entrou!";
+        }
+
+        function out() {
+            div1.style.background = "green";
+            div1.innerText = "Saiu!";
+        }
+
+    </script>
+</body>
+</html>

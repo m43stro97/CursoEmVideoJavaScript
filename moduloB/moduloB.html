@@ -9,7 +9,7 @@
     <h1>Modulo B - Comandos Básicos de JavaScript</h1>
     <h2>Aula 5 - Variáveis e Tipos Primitivos</h2>
     <p>No JavaScript moderno, para variáveis podemos usar o var ou let.</p>
-    <p>Identificadores:</p>
+    <p style="font-size: larger; color: tomato;">Identificadores:</p>
     <ul>
         <li>Podemo começar com letra, $ ou _</li>
         <li>Não podem começar com números</li>
@@ -18,12 +18,12 @@
         <li>Nao podem conter espaços</li>
         <li>Nao podem ser palavras reservadas. Ex: var, null</li>
     </ul>
-    <p>Dicas</p>
+    <p style="font-size: larger; color: tomato;">Dicas</p>
     <ul>
         <li>Maiúsculas e minúsculas fazem diferença</li>
         <li>Tentar escolher nomes coerentes para as variáveis</li>
     </ul>
-    <p>Tipos de Dados Primitivos</p>
+    <p style="font-size: larger; color: tomato;">Tipos de Dados Primitivos</p>
     <ul>
         <li>Number</li>
         <ul>
@@ -41,7 +41,60 @@
         <li>Function</li>
     </ul>
     <h2>Aula 6 - Tratamento de Dados</h2>
+    <p style="font-size: larger; color: tomato;">Comentários:</p>
+    <ul>
+        <li>Css: /* */</li>
+        <li>JavaScript: // ou /* */</li>
+        <li>HTML: <!-....--></li>
+    </ul>
+    <p style="font-size: larger; color: tomato;">Tipos de conversão:</p>
+    <p>Para converter uma string em number podemos usar o Number.parseInt() para converter para inteiro, e podemos usar o 
+        Number.parseFloat() para converter para float.
+        Atualmente podemos usar a conversão de duas maneiras: só Number, ele assume para qual tipo tem de converter, ou so parseInt()
+        e parseFloat que ele assume que é do tipo Number.
+    </p>
+    <p style="color: tomato; font-size: larger;">Formatação de strings:</p>
+    <p>var s = 'JavaScript'</p>
+    <p>'Eu estou a aprender s' //nao faz interpolação</p>
+    <p>'Eu estou a aprender ' + s //faz concatenação</p>
+    <p>`Eu estou a aprender ${s}` //usa template String</p>
+    <p>s.length //quantos caracteres tem a string</p>
+    <p>s.toUpperCase() //tudo para 'Maiusculas'</p>
+    <p>s.toLowerCase() //tudo para 'Minusculas'</p>
+    <p style="color: tomato; font-size: larger;">Formatação de numeros:</p>
+    <p>var n1 = 1540.5</p>
+    <p>n1.toFixed(2) //mete o n1 com duas casa decimais</p>
+    <p>n1 //1540.50</p>
+    <p>n1.toFixed(2).replace('.',',') // mete o n1 = 1540,50</p>
+    <p style="color: tomato; font-size: larger;">Exercicios:</p>
+    <a href="../moduloB/aula06/aula06_ex1.html" style="font-size: large;">Exercicio 1</a>
+    &nbsp;
+    <a href="../moduloB/aula06/aula06_ex2.html" style="font-size: large;">Exercicio 2</a>
+    <a href="../moduloB/aula06/aula06_ex3.html" style="font-size: large;">Exercicio 3</a>
+    <a href="../moduloB/aula06/aula06_ex4.html" style="font-size: large;">Exercicio 4</a>
+
     <h2>Aula 7 - Operadores (Parte 1)</h2>
+
+    <p style="color: tomato; font-size: larger;">Tipos de Operadores:</p>
+    <ul>
+        <li>Aritméticos</li>
+        <ul>
+            <li>+</li>
+            <li>*</li>
+            <li>-</li>
+            <li>/</li>
+            <li>%</li>
+            <li>**</li>
+        </ul>
+        <li>Atribuição</li>
+        <li>Relacionais</li>
+        <li>Lógicos</li>
+        <li>Ternário</li>
+    </ul>
+
+    <img src="./aula07/precedencia.png" alt="" style="width: 200px; height: 200px;">
+    <img src="./aula07/identidade.png" alt="" style="width: 200px; height: 200px;">
+
     <h2>Aula 8 - Operadores (Parte 2)</h2>
 </body>
 </html>
