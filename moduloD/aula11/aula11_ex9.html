@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+            background-color: blanchedalmond;
+            color: black;
+        }
+
+        input{
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionality</h1>
+    <p>Put your country:</p>
+    <input type="text" name="nationality" id="nationality" placeholder="Nationality">
+    <input type="button" value="Verify" onclick="verify()">
+    <div id="res"></div>
+
+    <script>
+        
+
+        function verify() {
+            var txtNationality = window.document.getElementById('nationality');
+            var resultado = window.document.getElementById('res');
+
+            console.log(txtNationality.value);
+            if(txtNationality.value === 'Portugal'){
+                resultado.innerHTML = `<p>Você é Português</p>`;
+            }else{
+                resultado.innerHTML = `<p>Você é Estrangeiro!</p>`
+            }
+        }
+        
+    </script>
+</body>
+</html>
