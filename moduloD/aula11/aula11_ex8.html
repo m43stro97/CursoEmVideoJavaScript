@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+            background-color: blanchedalmond;
+            color: black;
+        }
+
+        input{
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Velocidade</h1>
+    <p>Digite sua Velocidade:</p>
+    <input type="number" name="vel" id="vel" placeholder="Velocidade">Km/h
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        
+
+        function calcular() {
+            var txtVel = window.document.getElementById('vel');
+            var valueVel = Number(txtVel.value);
+            var resultado = window.document.getElementById('res');
+
+            resultado.innerHTML = `<p>Sua velocidade atual é <strong>${valueVel}Km/h</strong>!</p>`
+            if(valueVel > 50){
+                resultado.innerHTML += `<p>Foi <strong>Multado</strong>, ultrapassou o limite de velocidade</p>`;
+            }
+            resultado.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+        }
+        
+    </script>
+</body>
+</html>
