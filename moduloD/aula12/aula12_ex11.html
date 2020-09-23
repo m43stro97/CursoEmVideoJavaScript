@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+            background-color: black;
+            color: whitesmoke;
+        }
+
+        input{
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hora e Data atual</h1>
+    <div id="res"></div>
+
+    <script>
+        var res = window.document.querySelector('div#res');
+        var horas = new Date().toLocaleTimeString();
+        var hora = new Date().getHours();
+        var saudacao = '';
+
+        switch(true){
+            case (((0 <= hora) && (hora < 8)) || ((20 <= hora) && (hora < 24))):
+                saudacao = 'Boa noite';
+                break;
+            case ((8 <= hora) && (hora < 12)):
+                saudacao = 'Bom dia';
+                break;
+            case ((12 <= hora) && (hora < 20)):
+                saudacao = 'Boa tarde';
+                break;
+            
+            default:
+                break;
+        }
+        res.innerHTML = `${saudacao}, são ${horas} horas!`;
+        
+    </script>
+</body>
+</html>
