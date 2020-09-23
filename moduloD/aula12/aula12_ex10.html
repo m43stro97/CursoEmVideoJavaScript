@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+            background-color: black;
+            color: whitesmoke;
+        }
+
+        input{
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Posso ou não posso votar no Brasil?</h1>
+    <p>Digite a sua idade:</p>
+    <input type="number" name="age" id="age">
+    <input type="button" value="Verificar" onclick="verificarIdade()">
+    <div id="res"></div>
+
+    <script>
+        
+        function verificarIdade() {
+            var txtAge = window.document.querySelector('input#age');
+            var resultado = window.document.querySelector('div#res');
+            var age = Number(txtAge.value);
+            console.log(txtAge);
+            if(age < 16){
+                resultado.innerHTML = `Não Posso Votar!`
+            } else if(age >= 65 || age < 18){
+                resultado.innerHTML = `Voto Opcional!`
+            } else{
+                resultado.innerHTML = `Voto Obrigatório!`
+            }
+        }
+    </script>
+</body>
+</html>
