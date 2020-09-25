@@ -4,6 +4,10 @@ body{
     color: white;
 }
 
+input{
+    font: normal 15pt Arial;
+}
+
 header{
     text-align: center;
 }
@@ -28,4 +32,11 @@ footer{
     width: 200px;
     height: 200px;
     border-radius: 50%;
+}
+
+
+
+
+#res{
+    margin-top: 20px;
 }
